@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    	<home-header></home-header>
     <h1>{{ msg }}</h1>
     <span>
 该不该搁下重重的壳<br/>
@@ -23,18 +24,27 @@
 我有属于我的天<br/>
 任风吹干 留过的泪和汗<br/>
 总有一天我有属于我的天</span>
-    
+<router-view></router-view>
+<bottom></bottom> 
+ 
   </div>
+ 
 </template>
 
 <script>
+import HomeHeader from '../components/HomeHeader'
+import bottom from '../components/bottom'
 export default {
   name: 'About',
   data () {
     return {
       msg: '详情'
     }
-  }
+  },
+  components: {
+      HomeHeader,
+      bottom		
+}
 }
 </script>
 

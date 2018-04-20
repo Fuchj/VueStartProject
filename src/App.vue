@@ -1,11 +1,10 @@
 <template>
   <div id="app" class="dd">
     <!-- <img src="./assets/logo.png"> -->
-    <h1>凌云木Vue</h1>       
-          <router-link to="/">主页</router-link>
-          <router-link to="/About">详情</router-link>
-          <router-link to="/GuanYu">关于</router-link>         
+    <h1>凌云木Vue</h1> 
+    <!-- 路由匹配到的组件将渲染在这里 -->
     <router-view/>
+   
   </div>
 </template>
  
@@ -30,7 +29,6 @@ export default {
         }
 }
 </script>
-
 <style scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

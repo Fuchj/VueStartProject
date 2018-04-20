@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <div id="myChart" :style="{ height: '700px',margin:'0px'}"></div>
+   	<home-header></home-header>
     <h1>{{ msg }}</h1> 
     <ul>
       <li>Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。</li>
@@ -9,12 +9,16 @@
     <ul>
       <li>Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。</li>
       <li>Vue 学习起来非常简单.</li>
-    </ul>   
-    <router-link to="/GuanYu">关于</router-link>   
+    </ul>  
+     <div id="myChart" :style="{ height: '700px',margin:'0px'}"></div> 
+     <bottom></bottom> 
   </div>
 </template>
+
 <script>
 import Vue from 'vue';
+import HomeHeader from '../components/HomeHeader'
+import bottom from '../components/bottom'
 import echarts from 'echarts'
 Vue.prototype.$echarts = echarts ;
 export default {
@@ -27,6 +31,11 @@ export default {
       msg: 'Welcome to 凌云木 Vue.js App'
     }
   },
+// 在components字段中，包含导入的子组件
+components: {
+            HomeHeader,
+            bottom			
+},
   methods: {
     SetEchart(){
         // 基于准备好的dom，初始化echarts实例
