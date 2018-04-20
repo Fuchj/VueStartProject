@@ -3,7 +3,8 @@
     <!-- <img src="./assets/logo.png"> -->
     <h1>凌云木Vue</h1>       
           <router-link to="/">主页</router-link>
-          <router-link to="/About">详情</router-link>      
+          <router-link to="/About">详情</router-link>
+          <router-link to="/GuanYu">关于</router-link>         
     <router-view/>
   </div>
 </template>
@@ -30,13 +31,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 60px; 
 }
 </style>
